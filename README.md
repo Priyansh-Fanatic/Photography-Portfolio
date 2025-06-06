@@ -11,5 +11,5 @@
 
 This project is live at:
 
-**[https://vercel.com/priyansh-fanatics-projects/v0-photographer-portfolio](https://vercel.com/priyansh-fanatics-projects/v0-photographer-portfolio)**
+**[priyansh-photography-portfolio.vercel.app](https://priyansh-photography-portfolio.vercel.app/)**
 
