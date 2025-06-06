@@ -60,35 +60,44 @@ Visit the live website: [Priyansh Photography Portfolio](https://priyansh-photog
 
 ### Installation
 
-1. Clone the repository:
-\`\`\`bash
-git clone https://github.com/yourusername/photography-portfolio.git
-cd photography-portfolio
-\`\`\`
+Follow these steps to set up the project locally:
 
-2. Install dependencies:
-\`\`\`bash
-npm install
-# or
-yarn install
-\`\`\`
+1. **Clone the repository:**
 
-3. Set up environment variables:
-Create a `.env.local` file and add your EmailJS configuration:
-\`\`\`env
-NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-\`\`\`
+   ```bash
+   git clone https://github.com/priyansh-h/photography-portfolio.git
+   cd photography-portfolio
+   ```
 
-4. Run the development server:
-\`\`\`bash
-npm run dev
-# or
-yarn dev
-\`\`\`
+2. **Install dependencies:**
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Set up environment variables:**
+
+   Create a `.env.local` file in the root directory and add your EmailJS configuration:
+
+   ```env
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. **Visit the local server:**
+
+   Open your browser and go to: [http://localhost:3000](http://localhost:3000)
 
 ## 📄 License
 
