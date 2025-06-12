@@ -1,6 +1,6 @@
 # Priyansh Photography Portfolio
 
-Priyansh Photography Portfolio is a modern, responsive website built with Next.js 15 to showcase my professional photography across diffrent genres. Designed with a clean, minimal aesthetic, the portfolio features an interactive lightbox gallery, detailed project showcases, and a functional contact form integrated with EmailJS.
+This Portfolio is a modern, responsive website built with Next.js 15 to showcase my professional photography across diffrent genres. Designed with a clean, minimal aesthetic, the portfolio features an interactive lightbox gallery, detailed project showcases, and a functional contact form integrated with EmailJS.
 
 The site includes a dark/light mode toggle, responsive design, and SEO-optimized performance. Built using TypeScript, Tailwind CSS, and shadcn/ui, the project emphasizes both visual appeal and technical depth. It also supports advanced gallery features such as category filtering, image metadata, and equipment/location details. The project is fully deployable via Vercel and customizable for future enhancements.
 
