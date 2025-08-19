@@ -112,8 +112,8 @@ This message was sent from your photography portfolio website contact form.
 
         // @ts-ignore - EmailJS is loaded dynamically
         await window.emailjs.send(
-          "service_", // Your EmailJS service ID
-          "template_", // Your EmailJS template ID
+          "service_kj1664r", // Your EmailJS service ID
+          "template_akklidh", // Your EmailJS template ID
           templateParams,
         )
 

@@ -1,25 +1,89 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LightboxGallery, type GalleryImage } from "@/components/lightbox-gallery"
 
 export default function GalleryPage() {
-  // Update the categories array to include a new "Night" category
+  // Updated categories with better organization
   const categories = [
-    { id: "all", name: "All" },
-    { id: "street", name: "Street" },
-    { id: "wildlife", name: "Wildlife" },
-    { id: "landscape", name: "Landscape" },
-    { id: "spiritual", name: "Spiritual" },
-    { id: "celestial", name: "Celestial" },
-    { id: "abstract", name: "Abstract" },
-    { id: "architecture", name: "Architecture" },
-    { id: "travel", name: "Travel" },
-    { id: "urban", name: "Urban Life" },
-    { id: "night", name: "Night" },
+    { id: "all", name: "All", count: 0 },
+    { id: "street", name: "Street", count: 0 },
+    { id: "wildlife", name: "Wildlife", count: 0 },
+    { id: "landscape", name: "Landscape", count: 0 },
+    { id: "spiritual", name: "Spiritual", count: 0 },
+    { id: "celestial", name: "Celestial", count: 0 },
+    { id: "abstract", name: "Abstract", count: 0 },
+    { id: "architecture", name: "Architecture", count: 0 },
+    { id: "travel", name: "Travel", count: 0 },
+    { id: "urban", name: "Urban Life", count: 0 },
+    { id: "night", name: "Night", count: 0 },
   ]
 
-  // Update the wildlifeImages array to include new wildlife images
+  // Define primary categories for each image to avoid duplication
+  const streetImages: GalleryImage[] = [
+    {
+      src: "/images/street-boy-yellow.jpeg",
+      alt: "Boy in Yellow",
+      category: "Street",
+    },
+    {
+      src: "/images/street-bicycle.jpeg",
+      alt: "Bicycle Through Archway",
+      category: "Street",
+    },
+    {
+      src: "/images/street-resting.jpeg",
+      alt: "Resting Worker",
+      category: "Street",
+    },
+    {
+      src: "/images/street-smoking.jpeg",
+      alt: "Man Smoking",
+      category: "Street",
+    },
+    {
+      src: "/images/street-mirror.jpeg",
+      alt: "Reflection in Mirror",
+      category: "Street",
+    },
+    {
+      src: "/images/portrait-elder.jpeg",
+      alt: "Elder Man with Cap",
+      category: "Street",
+    },
+    {
+      src: "/images/portrait-woman.jpeg",
+      alt: "Woman in Traditional Dress",
+      category: "Street",
+    },
+    {
+      src: "/images/portrait-child.jpeg",
+      alt: "Child with Parent",
+      category: "Street",
+    },
+    {
+      src: "/images/elderly-plaid-cap.jpeg",
+      alt: "Elderly Man with Plaid Cap",
+      category: "Street",
+    },
+    {
+      src: "/images/man-vest-portrait.jpeg",
+      alt: "Man in White Shirt and Brown Vest",
+      category: "Street",
+    },
+    {
+      src: "/images/street-rickshaw-night.jpeg",
+      alt: "Rickshaw Driver at Night",
+      category: "Street",
+    },
+    {
+      src: "/images/street-soldier-portrait.jpeg",
+      alt: "Soldier on Duty",
+      category: "Street",
+    },
+  ]
+
   const wildlifeImages: GalleryImage[] = [
     {
       src: "/images/bird-wading.jpeg",
@@ -96,68 +160,28 @@ export default function GalleryPage() {
       alt: "Cat with Green Eyes Peeking Over Wall",
       category: "Wildlife",
     },
-  ]
-
-  // Update the streetImages array
-  const streetImages: GalleryImage[] = [
     {
-      src: "/images/street-boy-yellow.jpeg",
-      alt: "Boy in Yellow",
-      category: "Street",
+      src: "/images/wildlife-cat-yellow-eyes.jpeg",
+      alt: "Cat with Striking Yellow Eyes",
+      category: "Wildlife",
     },
     {
-      src: "/images/street-bicycle.jpeg",
-      alt: "Bicycle Through Archway",
-      category: "Street",
+      src: "/images/wildlife-bird-soaring.jpeg",
+      alt: "Bird of Prey Soaring",
+      category: "Wildlife",
     },
     {
-      src: "/images/street-resting.jpeg",
-      alt: "Resting Worker",
-      category: "Street",
+      src: "/images/wildlife-shorebird-mudflats.jpeg",
+      alt: "Shorebird on Mudflats",
+      category: "Wildlife",
     },
     {
-      src: "/images/street-smoking.jpeg",
-      alt: "Man Smoking",
-      category: "Street",
-    },
-    {
-      src: "/images/street-mirror.jpeg",
-      alt: "Reflection in Mirror",
-      category: "Street",
-    },
-    {
-      src: "/images/portrait-elder.jpeg",
-      alt: "Elder Man with Cap",
-      category: "Street",
-    },
-    {
-      src: "/images/portrait-woman.jpeg",
-      alt: "Woman in Traditional Dress",
-      category: "Street",
-    },
-    {
-      src: "/images/portrait-child.jpeg",
-      alt: "Child with Parent",
-      category: "Street",
-    },
-    {
-      src: "/images/police-officer-phone.jpeg",
-      alt: "Police Officer Checking Phone",
-      category: "Street",
-    },
-    {
-      src: "/images/elderly-plaid-cap.jpeg",
-      alt: "Elderly Man with Plaid Cap",
-      category: "Street",
-    },
-    {
-      src: "/images/man-vest-portrait.jpeg",
-      alt: "Man in White Shirt and Brown Vest",
-      category: "Street",
+      src: "/images/nature-water-droplets.jpeg",
+      alt: "Water Droplets on Leaves with Yellow Flower",
+      category: "Wildlife",
     },
   ]
 
-  // Update the landscapeImages array
   const landscapeImages: GalleryImage[] = [
     {
       src: "/images/landscape-himalayan.jpeg",
@@ -181,7 +205,6 @@ export default function GalleryPage() {
     },
   ]
 
-  // Add new spiritual images category
   const spiritualImages: GalleryImage[] = [
     {
       src: "/images/spiritual-shiva-sunset.jpeg",
@@ -215,7 +238,6 @@ export default function GalleryPage() {
     },
   ]
 
-  // Add new celestial images category
   const celestialImages: GalleryImage[] = [
     {
       src: "/images/celestial-moon.jpeg",
@@ -232,18 +254,22 @@ export default function GalleryPage() {
       alt: "Moon Through Clouds",
       category: "Celestial",
     },
+    {
+      src: "/images/celestial-moon-architecture.jpeg",
+      alt: "Crescent Moon Behind Architecture",
+      category: "Celestial",
+    },
+    {
+      src: "/images/celestial-silhouette-moon.jpeg",
+      alt: "Silhouette Against Moon",
+      category: "Celestial",
+    },
   ]
 
-  // Add new abstract images category
   const abstractImages: GalleryImage[] = [
     {
       src: "/images/abstract-pillar.jpeg",
       alt: "Orange Pillar Through Vines",
-      category: "Abstract",
-    },
-    {
-      src: "/images/travel-air-india.jpeg",
-      alt: "Air India Flight Through Clouds",
       category: "Abstract",
     },
     {
@@ -258,7 +284,6 @@ export default function GalleryPage() {
     },
   ]
 
-  // Add new architecture images category
   const architectureImages: GalleryImage[] = [
     {
       src: "/images/historical-dome.jpeg",
@@ -275,23 +300,17 @@ export default function GalleryPage() {
       alt: "Museum of Illusions",
       category: "Architecture",
     },
+    {
+      src: "/images/architecture-historical-dome.jpeg",
+      alt: "Historical Dome Through Trees",
+      category: "Architecture",
+    },
   ]
 
-  // Add new travel images category
   const travelImages: GalleryImage[] = [
-    {
-      src: "/images/city-sunset-silhouette.jpeg",
-      alt: "City Silhouette at Sunset",
-      category: "Travel",
-    },
     {
       src: "/images/travel-air-india.jpeg",
       alt: "Air India Flight Through Clouds",
-      category: "Travel",
-    },
-    {
-      src: "/images/travel-yoga-sign.jpeg",
-      alt: "The Abode of Yoga Sign",
       category: "Travel",
     },
     {
@@ -301,7 +320,6 @@ export default function GalleryPage() {
     },
   ]
 
-  // Add new urban life images category
   const urbanImages: GalleryImage[] = [
     {
       src: "/images/police-officer-phone.jpeg",
@@ -319,11 +337,6 @@ export default function GalleryPage() {
       category: "Urban Life",
     },
     {
-      src: "/images/museum-illusions.jpeg",
-      alt: "Museum of Illusions",
-      category: "Urban Life",
-    },
-    {
       src: "/images/city-sunset-silhouette.jpeg",
       alt: "City Silhouette at Sunset",
       category: "Urban Life",
@@ -335,41 +348,15 @@ export default function GalleryPage() {
     },
   ]
 
-  // Create a new nightImages array
   const nightImages: GalleryImage[] = [
     {
       src: "/images/night-streetlamp.jpeg",
       alt: "Street Lamp Between Trees at Night",
       category: "Night",
     },
-    {
-      src: "/images/vintage-lightbulb.jpeg",
-      alt: "Vintage Light Bulb with Visible Filament",
-      category: "Night",
-    },
-    {
-      src: "/images/celestial-moon.jpeg",
-      alt: "Full Moon",
-      category: "Night",
-    },
-    {
-      src: "/images/celestial-moon-sepia.jpeg",
-      alt: "Full Moon in Sepia",
-      category: "Night",
-    },
-    {
-      src: "/images/celestial-moon-clouds.jpeg",
-      alt: "Moon Through Clouds",
-      category: "Night",
-    },
-    {
-      src: "/images/city-sunset-silhouette.jpeg",
-      alt: "City Silhouette at Sunset",
-      category: "Night",
-    },
   ]
 
-  // Update the allImages array to include ALL images from all categories
+  // Combine all images for the "All" category
   const allImages: GalleryImage[] = [
     ...streetImages,
     ...wildlifeImages,
@@ -396,59 +383,120 @@ export default function GalleryPage() {
             </p>
           </div>
 
-          <Tabs defaultValue="all" className="mb-12">
-            <TabsList className="mx-auto flex w-full max-w-3xl justify-between overflow-x-auto">
+          {/* Updated Category Selection with Modern Design */}
+          <div className="mb-12">
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
               {categories.map((category) => (
-                <TabsTrigger key={category.id} value={category.id}>
-                  {category.name}
-                </TabsTrigger>
+                <button
+                  key={category.id}
+                  className="group relative px-6 py-3 rounded-full border border-muted-foreground/20 bg-background/50 backdrop-blur-sm hover:border-brand-blue dark:hover:border-brand-orange hover:bg-brand-blue/5 dark:hover:bg-brand-orange/5 transition-all duration-300 ease-in-out transform hover:scale-105"
+                  onClick={() => {
+                    // Handle category selection
+                    const element = document.getElementById(`category-${category.id}`)
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" })
+                    }
+                  }}
+                >
+                  <span className="text-sm font-medium text-foreground/80 group-hover:text-brand-blue dark:group-hover:text-brand-orange transition-colors">
+                    {category.name}
+                  </span>
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-brand-blue/10 to-brand-orange/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </button>
               ))}
-            </TabsList>
+            </div>
+          </div>
 
-            <TabsContent value="all" className="mt-12">
+          {/* Gallery Sections */}
+          <div className="space-y-16">
+            <section id="category-all">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">All Photography</h2>
+                <p className="text-muted-foreground">Complete collection of my work</p>
+              </div>
               <LightboxGallery images={allImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="street" className="mt-12">
+            <section id="category-street">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Street Photography</h2>
+                <p className="text-muted-foreground">Candid moments from urban life</p>
+              </div>
               <LightboxGallery images={streetImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="wildlife" className="mt-12">
+            <section id="category-wildlife">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Wildlife</h2>
+                <p className="text-muted-foreground">Nature and animals in their natural habitat</p>
+              </div>
               <LightboxGallery images={wildlifeImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="landscape" className="mt-12">
+            <section id="category-landscape">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Landscape</h2>
+                <p className="text-muted-foreground">Scenic views and natural beauty</p>
+              </div>
               <LightboxGallery images={landscapeImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="spiritual" className="mt-12">
+            <section id="category-spiritual">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Spiritual</h2>
+                <p className="text-muted-foreground">Sacred places and spiritual practices</p>
+              </div>
               <LightboxGallery images={spiritualImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="celestial" className="mt-12">
+            <section id="category-celestial">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Celestial</h2>
+                <p className="text-muted-foreground">Moon, stars, and astronomical phenomena</p>
+              </div>
               <LightboxGallery images={celestialImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="abstract" className="mt-12">
+            <section id="category-abstract">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Abstract</h2>
+                <p className="text-muted-foreground">Creative compositions and artistic interpretations</p>
+              </div>
               <LightboxGallery images={abstractImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="architecture" className="mt-12">
+            <section id="category-architecture">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Architecture</h2>
+                <p className="text-muted-foreground">Buildings, structures, and architectural details</p>
+              </div>
               <LightboxGallery images={architectureImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="travel" className="mt-12">
+            <section id="category-travel">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Travel</h2>
+                <p className="text-muted-foreground">Journey documentation and exploration</p>
+              </div>
               <LightboxGallery images={travelImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="urban" className="mt-12">
+            <section id="category-urban">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Urban Life</h2>
+                <p className="text-muted-foreground">City life and human interactions</p>
+              </div>
               <LightboxGallery images={urbanImages} masonry />
-            </TabsContent>
+            </section>
 
-            <TabsContent value="night" className="mt-12">
+            <section id="category-night">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-brand-blue dark:text-brand-orange mb-2">Night Photography</h2>
+                <p className="text-muted-foreground">Low-light and evening captures</p>
+              </div>
               <LightboxGallery images={nightImages} masonry />
-            </TabsContent>
-          </Tabs>
+            </section>
+          </div>
         </div>
       </main>
 

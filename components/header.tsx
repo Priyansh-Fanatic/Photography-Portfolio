@@ -27,7 +27,7 @@ export function Header() {
       }`}
     >
       <div className="container flex h-20 md:h-22 lg:h-24 items-center justify-between">
-        <div className="flex-shrink-0 mr-4 -ml-2 md:-ml-3 lg:-ml-4">
+        <div className="flex-shrink-0 mr-4 ml-2 md:ml-0 lg:ml-1">
           <div className="h-24 w-24 transform md:scale-[1.6] scale-100 md:translate-y-2 translate-y-0 transition-transform duration-300">
             <Logo />
           </div>
@@ -54,7 +54,16 @@ export function Header() {
               Projects
             </Link>
             <Link
-              href="/#about"
+              href="/"
+              onClick={(e) => {
+                if (window.location.pathname === "/") {
+                  e.preventDefault()
+                  const aboutSection = document.getElementById("about")
+                  if (aboutSection) {
+                    aboutSection.scrollIntoView({ behavior: "smooth" })
+                  }
+                }
+              }}
               className="text-sm font-medium text-foreground/80 hover:text-brand-blue dark:hover:text-brand-orange transition-colors px-2 py-1"
             >
               About
@@ -98,7 +107,19 @@ export function Header() {
                 <Link href="/projects" className="text-lg font-medium">
                   Projects
                 </Link>
-                <Link href="/#about" className="text-lg font-medium">
+                <Link
+                  href="/"
+                  onClick={(e) => {
+                    if (window.location.pathname === "/") {
+                      e.preventDefault()
+                      const aboutSection = document.getElementById("about")
+                      if (aboutSection) {
+                        aboutSection.scrollIntoView({ behavior: "smooth" })
+                      }
+                    }
+                  }}
+                  className="text-lg font-medium"
+                >
                   About
                 </Link>
                 <Link href="/contact" className="text-lg font-medium">

@@ -4,7 +4,8 @@ import Link from "next/link"
 export function Logo() {
   return (
     <Link href="/" className="flex items-center">
-      <div className="relative
+      <div
+        className="relative
              // Updated dimensions for increased mobile size and scaled up breakpoints
              h-16 w-64          // Mobile: Increased size
              sm:h-18 sm:w-72    // SM: Scaled up
@@ -13,11 +14,12 @@ export function Logo() {
 
              // Transform and translation classes for vertical alignment
              transform
-             translate-y-[10px]    // Mobile: Push DOWN by 2px
+             translate-y-[8px]    // Mobile: Push DOWN by 8px
              sm:translate-y-0     // SM screens: Reset translation
-             md:translate-y-[2px]
-          lg:translate-y-0     // LG screens and up: Reset translation (if they should behave like SM)
-          transition-transform duration-300">
+             md:translate-y-[2px] // MD: Slight adjustment
+             lg:translate-y-0     // LG screens and up: Reset translation
+             transition-transform duration-300"
+      >
         <Image
           src="/images/priyansh-logo.png"
           alt="Priyansh Photography"

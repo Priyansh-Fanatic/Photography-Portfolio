@@ -1,8 +1,6 @@
 # Priyansh Photography Portfolio
 
-This Portfolio is a modern, responsive website built with Next.js 15 to showcase my professional photography across diffrent genres. Designed with a clean, minimal aesthetic, the portfolio features an interactive lightbox gallery, detailed project showcases, and a functional contact form integrated with EmailJS.
-
-The site includes a dark/light mode toggle, responsive design, and SEO-optimized performance. Built using TypeScript, Tailwind CSS, and shadcn/ui, the project emphasizes both visual appeal and technical depth. It also supports advanced gallery features such as category filtering, image metadata, and equipment/location details. The project is fully deployable via Vercel and customizable for future enhancements.
+A modern, responsive photography portfolio website built with Next.js 15, showcasing professional photography work across multiple genres including street photography, wildlife, landscapes, and spiritual imagery.
 
 ## 🌟 Features
 
@@ -16,7 +14,20 @@ The site includes a dark/light mode toggle, responsive design, and SEO-optimized
 
 ## 🚀 Live Demo
 
-Visit the live website: [Priyansh Photography Portfolio](https://priyansh-photography-portfolio.vercel.app/)
+Visit the live website: [Priyansh Photography Portfolio](https://v0-photographer-portfolio.vercel.app)
+
+## 📸 Photography Categories
+
+- **Street Photography**: Documentary exploration of urban environments
+- **Wildlife**: Birds, animals, and nature photography
+- **Landscape**: Mountain ranges, scenic views, and natural beauty
+- **Spiritual**: Religious architecture and spiritual practices
+- **Celestial**: Astrophotography and moon phases
+- **Abstract**: Creative compositions and artistic interpretations
+- **Architecture**: Buildings, structures, and urban design
+- **Travel**: Journey documentation and cultural exploration
+- **Urban Life**: City life and human interactions
+- **Night Photography**: Low-light and evening captures
 
 ## 🛠️ Tech Stack
 
@@ -30,6 +41,27 @@ Visit the live website: [Priyansh Photography Portfolio](https://priyansh-photog
 - **Email Service**: EmailJS
 - **Deployment**: Vercel
 - **Image Optimization**: Next.js Image component
+
+## 📁 Project Structure
+
+\`\`\`
+├── app/                    # Next.js app directory
+│   ├── contact/           # Contact page
+│   ├── gallery/           # Gallery page with category filters
+│   ├── projects/          # Projects listing and detail pages
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Homepage
+├── components/            # Reusable React components
+│   ├── ui/               # shadcn/ui components
+│   ├── contact-form.tsx  # Contact form with validation
+│   ├── header.tsx        # Navigation header
+│   ├── footer.tsx        # Site footer
+│   ├── lightbox-gallery.tsx # Advanced gallery component
+│   └── project-detail.tsx # Project detail view
+├── public/               # Static assets
+│   └── images/          # Photography portfolio images
+└── lib/                 # Utility functions
+\`\`\`
 
 ## 🎨 Key Components
 
@@ -60,44 +92,96 @@ Visit the live website: [Priyansh Photography Portfolio](https://priyansh-photog
 
 ### Installation
 
-Follow these steps to set up the project locally:
+1. Clone the repository:
+\`\`\`bash
+git clone https://github.com/yourusername/photography-portfolio.git
+cd photography-portfolio
+\`\`\`
 
-1. **Clone the repository:**
+2. Install dependencies:
+\`\`\`bash
+npm install
+# or
+yarn install
+\`\`\`
 
-   ```bash
-   git clone https://github.com/priyansh-h/photography-portfolio.git
-   cd photography-portfolio
-   ```
+3. Set up environment variables:
+Create a `.env.local` file and add your EmailJS configuration:
+\`\`\`env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+\`\`\`
 
-2. **Install dependencies:**
+4. Run the development server:
+\`\`\`bash
+npm run dev
+# or
+yarn dev
+\`\`\`
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-3. **Set up environment variables:**
+## 📧 EmailJS Setup
 
-   Create a `.env.local` file in the root directory and add your EmailJS configuration:
+1. Create an account at [EmailJS](https://www.emailjs.com/)
+2. Create a new email service
+3. Create an email template with the following variables:
+   - `{{from_name}}`
+   - `{{from_email}}`
+   - `{{subject}}`
+   - `{{message}}`
+   - `{{timestamp}}`
+4. Update the service ID and template ID in the contact form component
 
-   ```env
-   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-   ```
+## 🎨 Customization
 
-4. **Run the development server:**
+### Colors
+The project uses a custom color scheme defined in `tailwind.config.ts`:
+- **Brand Blue**: `#0A1E81`
+- **Brand Orange**: `#FF6B0E`
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
+### Adding New Images
+1. Add images to the `public/images/` directory
+2. Update the respective gallery arrays in the page components
+3. Follow the naming convention: `category-description.jpeg`
 
-5. **Visit the local server:**
+### Adding New Projects
+1. Add project data to the `getProjectById` function in `app/projects/[projectId]/page.tsx`
+2. Include project metadata, descriptions, and image arrays
+3. Add the project to the projects list in `app/projects/page.tsx`
 
-   Open your browser and go to: [http://localhost:3000](http://localhost:3000)
+## 📱 Responsive Design
+
+The portfolio is fully responsive with breakpoints:
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px  
+- **Desktop**: > 1024px
+
+## ⚡ Performance Features
+
+- **Image Optimization**: Next.js Image component with lazy loading
+- **Code Splitting**: Automatic code splitting with Next.js
+- **Static Generation**: Pre-rendered pages for optimal performance
+- **Font Optimization**: Google Fonts optimization
+- **Bundle Analysis**: Built-in bundle analyzer
+
+## 🔧 Development
+
+### Available Scripts
+
+\`\`\`bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run start        # Start production server
+npm run lint         # Run ESLint
+npm run type-check   # Run TypeScript checks
+\`\`\`
+
+### Code Quality
+- **TypeScript**: Full type safety
+- **ESLint**: Code linting and formatting
+- **Prettier**: Code formatting (if configured)
 
 ## 📄 License
 
@@ -114,6 +198,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Priyansh** - [@priyansh_h_](https://instagram.com/priyansh_h_) - officialpriyansh25@gmail.com
+
+Project Link: [https://github.com/yourusername/photography-portfolio](https://github.com/yourusername/photography-portfolio)
 
 ## 🙏 Acknowledgments
 
