@@ -69,7 +69,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium">Instagram</p>
                       <a
-                        href="https://instagram.com/priyansh_h_"
+                        href="https://www.instagram.com/thepriyansh.raw/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-muted-foreground hover:text-brand-blue dark:hover:text-brand-orange transition-colors"
