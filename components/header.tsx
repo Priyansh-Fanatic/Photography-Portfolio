@@ -70,7 +70,7 @@ export function Header() {
           <div className="hidden md:flex items-center ml-2">
             <ThemeToggle />
             <Link
-              href="https://instagram.com/priyansh_h_"
+              href="https://www.instagram.com/thepriyansh.raw/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/70 hover:text-brand-orange transition-colors ml-2"
@@ -106,7 +106,7 @@ export function Header() {
                 </Link>
                 <div className="flex items-center gap-4 pt-4">
                   <ThemeToggle />
-                  <Link href="https://instagram.com/priyansh_h_" target="_blank" rel="noopener noreferrer">
+                  <Link href="https://www.instagram.com/thepriyansh.raw/" target="_blank" rel="noopener noreferrer">
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
                   </Link>
