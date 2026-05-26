@@ -1,4 +1,4 @@
-# Priyansh — Photography Portfolio
+# Priyansh — Creator Portfolio
 
 This repository contains a modern, responsive portfolio site built with Next.js (App Router) to showcase photography, design and video work. It focuses on fast performance, accessibility, and a polished visual experience.
 
@@ -111,7 +111,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## 📞 Contact
 
-**Priyansh** - [@priyansh_h_](https://instagram.com/priyansh_h_) - officialpriyansh25@gmail.com
+**Priyansh** - [@thepriyansh.raw](https://www.instagram.com/thepriyansh.raw) - officialpriyansh25@gmail.com
 
 ## 🙏 Acknowledgments
 
