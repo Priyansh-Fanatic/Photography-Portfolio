@@ -4,7 +4,7 @@ import type React from "react"
 import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, X, ImageOff } from "lucide-react"
-import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -101,7 +101,7 @@ export function LightboxGallery({ images, className, masonry = false }: Lightbox
   if (masonry) {
     return (
       <>
-        <div className={cn("columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4", className)}>
+        <div className={cn("columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-3 space-y-3", className)}>
           {validImages.map((image, index) => (
             <div
               key={index}
@@ -139,6 +139,8 @@ export function LightboxGallery({ images, className, masonry = false }: Lightbox
 
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent className="max-w-7xl p-0 overflow-hidden bg-black/95 border-none" onKeyDown={handleKeyDown}>
+            <DialogTitle className="sr-only">{validImages[currentIndex]?.alt ?? "Gallery image"}</DialogTitle>
+            <DialogDescription className="sr-only">Use arrow keys to navigate between images. Press Escape to close.</DialogDescription>
             <div className="relative h-[90vh] flex items-center justify-center">
               <Button
                 variant="ghost"
@@ -239,6 +241,8 @@ export function LightboxGallery({ images, className, masonry = false }: Lightbox
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-7xl p-0 overflow-hidden bg-black/95 border-none" onKeyDown={handleKeyDown}>
+          <DialogTitle className="sr-only">{validImages[currentIndex]?.alt ?? "Gallery image"}</DialogTitle>
+          <DialogDescription className="sr-only">Use arrow keys to navigate between images. Press Escape to close.</DialogDescription>
           <div className="relative h-[90vh] flex items-center justify-center">
             <Button
               variant="ghost"

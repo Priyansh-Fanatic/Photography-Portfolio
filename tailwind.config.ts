@@ -21,8 +21,13 @@ const config = {
     extend: {
       colors: {
         brand: {
-          blue: "#0A1E81",
           orange: "#FF6B0E",
+          "orange-light": "#FF8A3D",
+          "orange-dark": "#D95500",
+          dark: "#0D0D0D",
+          "dark-2": "#141414",
+          "dark-3": "#1C1C1C",
+          warm: "#F5F0EB",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +62,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+      },
+      fontFamily: {
+        syne: ["Syne", "Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

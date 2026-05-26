@@ -1,15 +1,22 @@
 import type React from "react"
 import "@/app/globals.css"
-import { Inter } from "next/font/google"
+import { Inter, Syne } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+const syne  = Syne({ subsets: ["latin"], variable: "--font-syne", weight: ["400","500","600","700","800"] })
 
 export const metadata = {
-  title: "Priyansh Photography Portfolio",
-  description: "Professional photography portfolio showcasing stunning images and photography services",
-    generator: 'v0.dev'
+  title: "Priyansh — Photographer · Graphic Designer · Video Editor",
+  description:
+    "Portfolio of Priyansh — street & wildlife photographer, bold graphic designer, and cinematic video editor based in India.",
+  generator: "v0.dev",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
@@ -19,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${syne.variable} ${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           {children}
           <Toaster />
