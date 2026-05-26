@@ -1,22 +1,22 @@
-# Priyansh Photography Portfolio
+# Priyansh — Photography Portfolio
 
-This Portfolio is a modern, responsive website built with Next.js 15 to showcase my professional photography across diffrent genres. Designed with a clean, minimal aesthetic, the portfolio features an interactive lightbox gallery, detailed project showcases, and a functional contact form integrated with EmailJS.
+This repository contains a modern, responsive portfolio site built with Next.js (App Router) to showcase photography, design and video work. It focuses on fast performance, accessibility, and a polished visual experience.
 
-The site includes a dark/light mode toggle, responsive design, and SEO-optimized performance. Built using TypeScript, Tailwind CSS, and shadcn/ui, the project emphasizes both visual appeal and technical depth. It also supports advanced gallery features such as category filtering, image metadata, and equipment/location details. The project is fully deployable via Vercel and customizable for future enhancements.
+Key features include an interactive lightbox gallery with a masonry layout, detailed project pages, a contact form (EmailJS integration), theme support (dark/light), and responsive layouts across devices.
 
 ## 🌟 Features
 
 - **Modern Design**: Clean, minimal aesthetic with elegant typography and smooth animations
-- **Responsive Layout**: Fully responsive design that works seamlessly across all devices
-- **Interactive Gallery**: Advanced lightbox gallery with masonry layout and keyboard navigation
-- **Project Showcases**: Detailed project pages with comprehensive descriptions and image collections
-- **Contact Integration**: Functional contact form with EmailJS integration
-- **Dark/Light Mode**: Theme toggle with system preference detection
-- **Performance Optimized**: Built with Next.js 15 for optimal performance and SEO
+- **Responsive Layout**: Works across phones, tablets, and desktop
+- **Interactive Gallery**: Masonry lightbox with keyboard navigation and touch support
+- **Project Showcases**: Rich project pages with metadata and equipment info
+- **Contact Integration**: EmailJS-powered contact form (configurable via env)
+- **Theme Support**: Dark / Light mode with system preference
+- **Performance**: Optimized with Next.js and Tailwind CSS
 
 ## 🚀 Live Demo
 
-Visit the live website: [Priyansh Photography Portfolio](https://priyansh-photography-portfolio.vercel.app/)
+Visit the live website: https://priyansh-creator-portfolio.vercel.app/
 
 ## 🛠️ Tech Stack
 
@@ -25,7 +25,7 @@ Visit the live website: [Priyansh Photography Portfolio](https://priyansh-photog
 - **Styling**: Tailwind CSS
 - **UI Components**: shadcn/ui
 - **Icons**: Lucide React
-- **Fonts**: Inter, Playfair Display
+- **Fonts**: Inter, Syne
 - **Form Handling**: React Hook Form with Zod validation
 - **Email Service**: EmailJS
 - **Deployment**: Vercel
@@ -55,53 +55,51 @@ Visit the live website: [Priyansh Photography Portfolio](https://priyansh-photog
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+- Node.js 18+ (LTS recommended)
+- A package manager: `pnpm` is recommended (project includes `pnpm-lock.yaml`), but `npm` or `yarn` also work.
 
-### Installation
+### Install & run (recommended)
 
-Follow these steps to set up the project locally:
+1. Clone the repository:
 
-1. **Clone the repository:**
+```bash
+git clone https://github.com/Priyansh-Fanatic/Photography-Portfolio.git
+cd Photography-Portfolio
+```
 
-   ```bash
-   git clone https://github.com/priyansh-h/photography-portfolio.git
-   cd photography-portfolio
-   ```
+2. Install dependencies (recommended with Corepack/pnpm):
 
-2. **Install dependencies:**
+```bash
+corepack enable
+corepack pnpm install
+# or if you prefer npm/yarn (lockfile may diverge):
+# npm install
+# yarn install
+```
 
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+3. Configure environment variables (optional but recommended for contact form):
 
-3. **Set up environment variables:**
+Create a `.env.local` file with your EmailJS settings or other secrets:
 
-   Create a `.env.local` file in the root directory and add your EmailJS configuration:
+```env
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-   ```env
-   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
-   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
-   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
-   ```
+4. Start the dev server:
 
-4. **Run the development server:**
+```bash
+pnpm dev
+# or
+npm run dev
+```
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Visit the local server:**
-
-   Open your browser and go to: [http://localhost:3000](http://localhost:3000)
+5. Open http://localhost:3000 to view the site locally.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
